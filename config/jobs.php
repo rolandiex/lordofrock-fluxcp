@@ -150,6 +150,8 @@ return array(
 	
 	4215 => 'Rebellion',
 	4218 => 'Summoner',
+	4239 => 'Star Emperor',
+	4240 => 'Soul Reaper',	
 
 	4220 => 'Baby Summoner',
 	4222 => 'Baby Ninja',
