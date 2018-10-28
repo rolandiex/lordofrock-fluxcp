@@ -52,7 +52,11 @@ if ($item) {
 	}
 	
 	$mobDB      = "{$server->charMapDatabase}.monsters";
-	$fromTables = array("{$server->charMapDatabase}.mob_db", "{$server->charMapDatabase}.mob_db2");
+	if($server->isRenewal) {
+	$fromTables = array("{$server->charMapDatabase}.mob_db_re", "{$server->charMapDatabase}.mob_db2_re");
+	} else {
+	$fromTables = array("{$server->charMapDatabase}.mob_db", "{$server->charMapDatabase}.imob_db2");
+	}
 	$mobTable   = new Flux_TemporaryTable($server->connection, $mobDB, $fromTables);
 	
 	$col  = 'ID AS monster_id, iName AS monster_name, LV AS monster_level, ';
